@@ -42,32 +42,34 @@
           <div class=box><div class=inner>
           <p align="center">Testando a funcionalidade de criar joguinhos pra páginas web com Clickteam Fusion 2.5</p>
 
-          <body>
-            <div id="wrapper">
-              <div id="border">
-                <div id="canvas">
-                  <canvas id="MMFCanvas" width="640" height="360">
-                    <p>Your browser does not support Canvas.</p>
-                  </canvas>   
-                </div>
-              </div>
-            </div>  
+<!-- This is where we create the Canvas element that will contain the application...-->
+<script src="src/Runtime.js"></script>
 
-            <script src="src/Runtime.js"></script>
-
-            <script>
-                // RUNTIMESTART
-                // This is where the HTML5 runtime is actually started
-              window.addEventListener("load", windowLoaded, false);
-              function windowLoaded()
-              {
-                // Calls the runtime
-                // First parameter : name of the canvas element
-                // Second parameter : path to the cch file. Images and sounds must lay beside this file
-                new Runtime("MMFCanvas", "resources/provisory-platformer-game.cch");
-              }
-            </script>
+<body>
+  <div id="wrapper">
+    <div id="border">
+      <div id="canvas">
+        <canvas id="MMFCanvas" width="640" height="360">
+          <p>Your browser does not support Canvas.</p>
+        </canvas>   
+      </div>
+    </div>
+  </div>  
+  <script>
+      // RUNTIMESTART
+      // This is where the HTML5 runtime is actually started
+    window.addEventListener("load", windowLoaded, false);
+    function windowLoaded()
+    {
+      // Calls the runtime
+      // First parameter : name of the canvas element
+      // Second parameter : path to the cch file. Images and sounds must lay beside this file
+      new Runtime("MMFCanvas", "resources/provisory-platformer-game.cch");
+    }
+      // RUNTIMESTARTEND
+  </script>
         </body>
+
         <p align="center">Controles: WASD - movimento, Shift - pular, Espaço (durante o ar) - dash, Mouse1 (enquanto anda) - slash, Y - Debug Mode</p>
         <p>se pá eu posso usar isso pra fazer trabalho escolar :3, <a href="https://github.com/moodwoboo/provisory-platformer-game" target="_blank">project's repo here btw</p>
           <p align="center">written on 13/02/2025</p>
